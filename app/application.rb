@@ -10,6 +10,7 @@ class Application
         item_name = req.path.split("/items").last 
         item = @@items.detect do |i| 
           i.name ==  item.name 
+        end 
         if item 
           resp.write item.price 
         else 
