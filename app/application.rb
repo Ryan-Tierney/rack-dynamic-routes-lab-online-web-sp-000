@@ -1,4 +1,4 @@
-class Application 
+class Application < Item
   
   @@items = []
   
