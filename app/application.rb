@@ -32,8 +32,8 @@ class Application
   @@items = []
 
   def call(env)
-    req = Rack::Request.new(env)
-    resp = Rack::Response.new
+    req = Rack::Response.new(env)
+    resp = Rack::Request.new
 
     if req.path.match(/items\/.+/)
       item_name = req.path.split("/items/").last
