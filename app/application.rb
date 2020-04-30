@@ -13,6 +13,11 @@ class Application
           resp.write item.price 
         else 
           resp.write "Item not found"
-          req.write " "
+          resp.status "400" 
+        end 
+      else 
+        resp.write "Path not found"
+        resp.status "400"
       end
+    end
   end 
