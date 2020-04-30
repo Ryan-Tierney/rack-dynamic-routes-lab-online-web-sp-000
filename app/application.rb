@@ -8,9 +8,7 @@ class Application
     
       if req.path.match(/items\/.+/)
         item_name = req.path.split("/items/").last 
-        item = @@items.detect do |i| 
-          i.name ==  item.name 
-        end 
+        item = @@items.detect { |i| i.name ==  item.name}
         if item 
           resp.write item.price 
         else 
@@ -25,4 +23,3 @@ class Application
     resp.finish 
   end 
 end   
-
