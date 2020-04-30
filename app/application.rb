@@ -10,6 +10,8 @@ class Application
         item = @@items.detect do |i| 
           i.name = item.name 
         if item 
-          
+          resp.write item.price 
+        else 
+          resp.write "item not found"
       end
   end 
