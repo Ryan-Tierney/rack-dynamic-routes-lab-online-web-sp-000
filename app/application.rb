@@ -20,4 +20,7 @@ class Application
         resp.write "Path not found"
         resp.status 404
       end
-    end
+      
+    resp.finish 
+  end 
+end   
