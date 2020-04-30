@@ -21,4 +21,3 @@ class Application
         resp.status "400"
       end
     end
-  end 
